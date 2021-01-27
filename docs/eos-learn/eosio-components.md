@@ -18,16 +18,19 @@ sidebar_label: EOSIO Components
 
 [Cleos](https://developers.eos.io/manuals/eos/latest/cleos/index) is a command line tool that interfaces with Nodeos with a wallet utility (Keosd) responsible for managing keys and signing transactions. Developers can also use cleos to deploy and test EOSIO smart contracts.
 
-To use Cleos, you need the end point(IP address and port number) of a running nodeos instance.
+## How to use Cleos
+
+In order to use **cleos**, you need the domain or IP direction (and the port number) of an instance of **nodeos** in execution. 
+The instance of nodeos needs to be configured to load `eosio :: chain_api_plugin` when starts. This allows that nodeos responds to the RPC request that come from cleos.
 
 > [Keosd](https://developers.eos.io/manuals/eos/latest/keosd/index): is a key manager service daemon for storing private keys and signing digital messages. 
 
 ### Cleos Commands
 
 ```shell 
-$cleos --help
-$cleos create --help
-$cleos create account --help
+$ cleos --help
+$ cleos create --help
+$ cleos create account --help
 ```
 
 ### Cleos Example 
@@ -42,9 +45,14 @@ $ cleos wallet create -n mywallet --to-console
 
 ## Getting Started
 
+![](https://raw.githubusercontent.com/eoscostarica/guide.eoscostarica.io/master/static/img/diagrams/cleos.png)
+
 As a way to help you start in EOSIO world, here is a guide on how to install the EOSIO Contract Development Toolkit.
 If you are using a different OS rather than windows visit [this site](https://developers.eos.io/welcome/latest/getting-started/development-environment/before-you-begin) to see the prerequisites and skip to [Install Binaries](#install-binaries).
 This installation guide will aim for Windows users, unfortunately, EOSIO does not provide PowerShell ports and instructions for this OS. As a developer you have two options *one* to use a Virtual Machine or, like in this case a Linux Terminal on Windows. Follow these steps:
+
+> This guide works on **Windows** and **Ubuntu 18.04** OS
+
 
 - Go to your Control Panel
 - Go to Programs -> Programs and Features
@@ -67,6 +75,10 @@ Here you are in your C disk where you can execute `$ls -al` to see your files.
 $ cd Users/"your_user_name"
 ```
 After you are in your wish folder you can follow the next steps.
+
+## Get your private keys
+
+More information [about private keys](https://guide.eoscostarica.io/docs/eos-learn/private-keys)
 
 ## Install binaries
 
